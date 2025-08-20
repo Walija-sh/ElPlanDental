@@ -88,6 +88,7 @@ nav{
 
 .nav-menu.active{
 right: 0%;
+z-index: 100000000000;
 }
 
 .nav-close{

@@ -23,17 +23,17 @@
                 <i class="ri-close-large-line"></i>
             </div>
             <ul class="nav-links"> 
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">¿Qué <br> incluye?</a></li>
-                <li><a href="#">Registro</a></li>
-                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#incluye">¿Qué <br> incluye?</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
             </ul>
         </div>
         <div class="nav-menu-toggler nav-icon">
             <i class="ri-menu-line"></i>
         </div>
     </nav>
-    <section class=" hero-cont">
+    <section id="inicio" class=" hero-cont">
         <div class="hero-sect section">
             
             <div class="hero-content">
@@ -79,7 +79,7 @@ al mes</p>
        </div>
      </section>
      <!-- services -->
-    <section class="serv-cont">
+    <section id="incluye" class="serv-cont">
         <div class="section serv-sect">
            <div class="serv-left">
              <div class="serv-content">
@@ -215,7 +215,7 @@ en constante expansión.
        </div>
     </section>
     <!-- cta -->
-    <section class="cta-sect section">
+    <section id="registro" class="cta-sect section">
         <div class="cta-left">
             <h4>
                 <span>No pierdas esta
@@ -243,7 +243,7 @@ de algo grande.
             </div>
         </div>
     </section>
-    <section class="footer-cont">
+    <section id="contacto" class="footer-cont">
         <div class="footer-obj">
             <img src="./assets/footer-obj.svg" alt="">
         </div>
@@ -271,19 +271,28 @@ de algo grande.
     </section>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded',()=>{
-            const menu=document.querySelector('.nav-menu');
-            const menuOpen=document.querySelector('.nav-menu-toggler');
-            const menuClose=document.querySelector('.nav-close');
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.nav-menu');
+    const menuOpen = document.querySelector('.nav-menu-toggler');
+    const menuClose = document.querySelector('.nav-close');
+    const navLinks = document.querySelectorAll('.nav-links a'); 
 
-            menuOpen.addEventListener('click',()=>{
-                menu.classList.add('active')
-            })
-            menuClose.addEventListener('click',()=>{
-                menu.classList.remove('active')
-            })
-        })
-    </script>
+    menuOpen.addEventListener('click', () => {
+      menu.classList.add('active');
+    });
+
+    menuClose.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
