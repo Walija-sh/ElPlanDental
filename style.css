@@ -833,12 +833,13 @@ font-size: 28px;
 .sticker-content{
     padding: 30px 40px;
 font-size: 26px;
-max-width: 75%;
+max-width: 80%;
+padding-right: 80px;
 
 }
 .sticker-img{
     display: block;
-    margin-left: -5%;
+    margin-left: -10%;
 }
 .metric-sect{
     padding: 40px;
@@ -1008,7 +1009,8 @@ font-size: 38px;
 .sticker-content{
 font-size: 35px;
  padding: 45px 80px;
- padding-right: 85px;
+ padding-right: 120px;
+ max-width: 75%;
 
 } 
 .sticker-img{
